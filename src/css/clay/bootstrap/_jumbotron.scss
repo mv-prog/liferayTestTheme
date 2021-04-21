@@ -1,0 +1,47 @@
+.jumbotron {
+  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  margin-bottom: $jumbotron-padding;
+  color: $jumbotron-color;
+  background-color: $jumbotron-bg;
+  @include border-radius($border-radius-lg);
+
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+  }
+  a.site-name {
+    font-size: 20px;
+  }
+  #heading {
+    display: inline;
+    a.logo {
+      font-size: 20px;
+    }
+  }
+  a#sign-in {
+    font-size: 20px;
+    display: flex;
+    -ms-flex-align: end;
+    justify-content: end;
+    &:visited,
+    &:link,
+    &:focus {
+      color: black;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &::after {
+      font-family: FontAwesome;
+      content: "\f095";
+      display: inline-block;
+      padding-right: 3px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
+}
