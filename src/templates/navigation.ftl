@@ -1,4 +1,4 @@
-<nav class="${nav_css_class} navbar navbar-expand-lg" id="navigation" role="navigation">
+<nav class="${nav_css_class} navbar" id="navigation" role="navigation">
 	<ul aria-label="<@liferay.language key='site-pages' />" class="navbar-nav mr-auto" role="menubar">
 		<#list nav_items as nav_item>
 			<#assign

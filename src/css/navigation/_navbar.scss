@@ -7,15 +7,23 @@
 		position: absolute;
 		width: 100%;
 	}
+}
 	.navbar-nav .nav-item {
 		a {
-			color: black;
-			&:visited, &:link{
-			color: black;
+			font-weight: 600;
+			&:visited,
+			&:link {
+				color: $link-color;
+				font-weight: 600;
 			}
 		}
 	}
 	// *{
 	// 	text-decoration: none;
 	// }
-}
+
+	.site-name{
+		color: $link-color;
+		font-size: 20px;
+		font-weight: 600;
+	}

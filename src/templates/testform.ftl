@@ -78,12 +78,15 @@
     }
 }
     #formComponent{
-        height: 120%;
+        height: 450px;
         width: 100%;
+        padding-top: 40px;
 }
     #formContainer{
         background-color: rgba(255, 255, 255, 0.6);
-        width: 65%;
+        width: 50%;
+        padding-top: 20px;
+        border-radius: 18px;
     }
     h2#formTitle{
         margin-top: 30px;
