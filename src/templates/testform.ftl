@@ -26,6 +26,7 @@
                 <input type="date" class="form-control" id="checkOutDate">
             </div>
             <div class="form-group r selects">
+            <label for="formRooms">Rooms</label>
                 <select name="formRooms" class="form-control" id="formRooms">
                     <option selected value="1">1</option>
                     <option value="2">2</option>
@@ -38,6 +39,7 @@
                 </select>
             </div>
             <div class="form-group r selects">
+            <label for="formAdults">Adults</label>
                 <select name="formAdults" class="form-control" id="formAdults">
                     <option value="1">1</option>
                     <option selected value="2">2</option>
@@ -50,6 +52,7 @@
                 </select>
             </div>
             <div class="form-group r selects">
+            <label for="formChildren">Children</label>
                 <select name="formChildren" class="form-control" id="formChildren">
                     <option selected value="0">0</option>
                     <option value="1">1</option>
@@ -70,22 +73,24 @@
 </div>
 </div>
 <style>   
-@media screen and (min-width:610px) {
+    #formComponent{
+        height: 450px;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+@media screen and (min-width:960px) {
     #formComponent{
         background: url(<#if formBackgroundImage.getData()?? && formBackgroundImage.getData() != "">
     ${formBackgroundImage.getData()}</#if>) no-repeat;        
     background-size: cover;
     }
 }
-    #formComponent{
-        height: 450px;
-        width: 100%;
-        padding-top: 40px;
-}
     #formContainer{
         background-color: rgba(255, 255, 255, 0.6);
-        width: 50%;
+        width: 55%;
         padding-top: 20px;
+        padding-bottom: 10px;
         border-radius: 18px;
     }
     h2#formTitle{
@@ -98,9 +103,9 @@
         border-color: ${formButtonColor.getData()};
         margin-left: 50px;
     }
-    *{
+    <#--  *{
         margin: 0 auto;
-    }
+    }  -->
     .row{
         margin-left: 10px;
     }
@@ -123,7 +128,6 @@
         border-color: ${formButtonColor.getData()};
     }
 
-    .form-group.r.selects,
     div.buttonSubmit {
         margin-top: 31px;
     }
