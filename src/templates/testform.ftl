@@ -1,100 +1,113 @@
 <div id="formComponent">
-<div class="container" id="formContainer">
-    <div class="row">
-        <img src="/image/layout_set_logo?img_id=35523&t=1618989862654" alt="company logo">
-        <h2 class="formTitle" id="formTitle">
-            <lfr-editable id="formTitleEditable" type="text">Discover amazing places</lfr-editable>
-        </h2>
-    </div>
-    <h3 class="formSubtitle" id="formSubtitle">
-        <lfr- id="formSubtitleEditable" type="text">Where do you want to go next?</lfr-editable>
-    </h3>
-    <form>
-        <div class="form-group">
-            <label for="formSearch">Search</label>
-            <input type="search" class="form-control" id="formSearch" aria-describedby="searchHelp"
-                placeholder="Search hotels">
-            <small id="searchHelp" class="form-text text-muted">Search hotels or places</small>
+    <div class="container" id="formContainer">
+        <div class="row logo-title">
+            <img src="${formLogo.getData()}" alt="company logo" id="formLogo">
+            <h2 class="h2Title" id="h2Title">
+                ${h2Title.getData()}
+            </h2>
         </div>
-        <div class="row">
-            <div class="form-group r">
-                <label for="checkInDate">Check-In Date</label>
-                <input type="date" class="form-control" id="checkInDate">
+        <form>
+            <div class="row">
+                <div class="form-group">
+                    <label for="formSearch">Search</label>
+                    <input type="search" class="form-control" id="formSearch" aria-describedby="searchHelp"
+                        placeholder="${formSearch.getData()}">
+                    <small id="searchHelp" class="form-text text-white">${formSearch.getData()}</small>
+                </div>
+                <div class="form-group r">
+                    <label for="checkInDate">Check-In Date</label>
+                    <input type="date" class="form-control" id="checkInDate">
+                </div>
+                <div class="form-group r">
+                    <label for="checkOutDate">Check-Out Date</label>
+                    <input type="date" class="form-control" id="checkOutDate">
+                </div>
+                <div class="form-group r selects">
+                    <label for="formRooms">Rooms</label>
+                    <select name="formRooms" class="form-control" id="formRooms">
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div class="form-group r selects">
+                    <label for="formAdults">Adults</label>
+                    <select name="formAdults" class="form-control" id="formAdults">
+                        <option value="1">1</option>
+                        <option selected value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div class="form-group r selects">
+                    <label for="formChildren">Children</label>
+                    <select name="formChildren" class="form-control" id="formChildren">
+                        <option selected value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div class="buttonSubmit">
+                    <button type="submit" id="formButton" href="${formButtonLink.getFriendlyUrl()}" class="btn btn-primary r">${formButton.getData()}</button>
+                </div>
             </div>
-            <div class="form-group r">
-                <label for="checkOutDate">Check-Out Date</label>
-                <input type="date" class="form-control" id="checkOutDate">
-            </div>
-            <div class="form-group r selects">
-            <label for="formRooms">Rooms</label>
-                <select name="formRooms" class="form-control" id="formRooms">
-                    <option selected value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-            </div>
-            <div class="form-group r selects">
-            <label for="formAdults">Adults</label>
-                <select name="formAdults" class="form-control" id="formAdults">
-                    <option value="1">1</option>
-                    <option selected value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-            </div>
-            <div class="form-group r selects">
-            <label for="formChildren">Children</label>
-                <select name="formChildren" class="form-control" id="formChildren">
-                    <option selected value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-            </div>
-            <div class="buttonSubmit">
-                <button type="submit" id="formButton" class="btn btn-primary r">Submit</button>
-            </div>
+        </form>
+    </div>
+    <div class="orderByDiv">
+        <form action="">
+        <div class="form-group orderbyGroup">
+            <label for="OrderBy">Order By</label>
+            <select name="OrderBy" class="form-control col-lg-2 col-md-3" id="OrderBy">
+                <option selected value="Lowest Price First">Lowest Price First</option>
+                <option value="Highest Price First">Highest Price First</option>
+                <option value="Popular">Popular</option>
+                <option value="Recommended">Recommended</option>
+            </select>
         </div>
     </form>
-</div>
+    </div>
 </div>
 <style>   
-    #formComponent{
-        height: 450px;
+    .row.logo-title{
+        justify-content: space-around;
+    }
+    .orderByDiv{
+        text-align: left;
+        margin-top: 25px;
+    }
+    #formComponent {
         width: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
-}
-@media screen and (min-width:960px) {
-    #formComponent{
-        background: url(<#if formBackgroundImage.getData()?? && formBackgroundImage.getData() != "">
-    ${formBackgroundImage.getData()}</#if>) no-repeat;        
-    background-size: cover;
-    }
-}
-    #formContainer{
-        background-color: rgba(255, 255, 255, 0.6);
-        width: 55%;
-        padding-top: 20px;
+        padding-top: 10px;
         padding-bottom: 10px;
-        border-radius: 18px;
     }
-    h2#formTitle{
-        margin-top: 30px;
+    #formSearch{
+        max-width:95%;
+    }
+    #formContainer {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 15px;
+    }
+    #formLogo{
+        max-width:50px;
+        margin-right: 10px;
     }
     #formButton, .btn.btn-primary {
         color: #fff;
@@ -109,9 +122,7 @@
     .row{
         margin-left: 10px;
     }
-    #formSearch{
-        width: 50%;
-    }
+    
     #formButton:hover {
         background-color: ${formButtonColor.getData()};
 
@@ -132,7 +143,7 @@
         margin-top: 31px;
     }
 
-    .form-group.r {
+    .form-group.r, #formSearch {
         margin-right: 10px;
     }
 </style>

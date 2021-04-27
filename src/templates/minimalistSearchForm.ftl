@@ -1,7 +1,7 @@
 <div id="formComponent">
     <div class="container" id="formContainer">
-        <div class="row">
-            <img src="${formLogo.getData()}" alt="company logo" id="formLogo">   
+        <div class="row logo-title">
+            <img src="${formLogo.getData()}" alt="company logo" id="formLogo">
             <h2 class="h2Title" id="h2Title">
                 ${h2Title.getData()}
             </h2>
@@ -72,7 +72,7 @@
         <form action="">
         <div class="form-group orderbyGroup">
             <label for="OrderBy">Order By</label>
-            <select name="OrderBy" class="form-control" id="OrderBy">
+            <select name="OrderBy" class="form-control col-lg-2 col-md-3" id="OrderBy">
                 <option selected value="Lowest Price First">Lowest Price First</option>
                 <option value="Highest Price First">Highest Price First</option>
                 <option value="Popular">Popular</option>
@@ -83,6 +83,11 @@
     </div>
 </div>
 <style>   
+   
+    .orderByDiv{
+        text-align: left;
+        margin-top: 25px;
+    }
     #formComponent {
         width: 100%;
         padding-top: 10px;
@@ -100,11 +105,10 @@
     }
     #formLogo{
         max-width:50px;
-        margin-right: 10px;
+        margin-right: 5px;
     }
-    #formButton, .btn.btn-primary {
+    #formButton, .btn.btn-primary.r {
         color: #fff;
-
         background-color: ${formButtonColor.getData()};
         border-color: ${formButtonColor.getData()};
         margin-left: 50px;
@@ -122,12 +126,12 @@
         border-color: ${formButtonColor.getData()};
     }
 
-    #formButton:active, .btn.btn-primary:active {
+    #formButton:active, .btn.btn-primary.radius:active {
         background-color: ${formButtonColor.getData()};
         border-color: ${formButtonColor.getData()};
     }
 
-    #formButton:focus, .btn.btn-primary:focus {
+    #formButton:focus, .btn.btn-primary.r:focus {
         background-color: ${formButtonColor.getData()};
         border-color: ${formButtonColor.getData()};
     }
